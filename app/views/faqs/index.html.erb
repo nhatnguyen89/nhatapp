@@ -1,0 +1,27 @@
+<h1>Listing faqs</h1>
+
+<table>
+  <tr>
+    <th>Main title</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faqs.each do |faq| %>
+  <tr>
+    <td><%= faq.main_title %></td>
+    <td><%= faq.title %></td>
+    <td><%= faq.content %></td>
+    <td><%= link_to 'Show', faq %></td>
+    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Destroy', faq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Faq', new_faq_path %>
