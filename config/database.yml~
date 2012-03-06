@@ -3,7 +3,12 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
+#development:
+ # adapter: mysql
+  # database: hihihimysql
+  # username: root
+  # password:
+  development:
    adapter: postgresql
    encoding: unicode
    database: hihihisql
